@@ -59,7 +59,7 @@ const MemberCard = ({ member }) => (
       <img 
         src={member.profile_image} 
         alt={member.name} 
-        className="w-[90px] object-cover rounded-lg"gap-8
+        className="w-[90px] object-cover rounded-lg"
         loading="lazy"
       />
       <div className="flex flex-col flex-1 min-w-0">

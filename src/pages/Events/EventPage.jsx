@@ -94,7 +94,7 @@ function EventPage() {
             
             {/* Render multiple year sections */}
             {[1, 2].map((year) => (
-              <YearSectionSkeleton key={year} />
+              <YearSectionSkeleton key={`skeleton-${year}`} />
             ))}
           </div>
         </div>
@@ -127,10 +127,24 @@ function EventPage() {
   };
 
   const isEventPast = (eventDate, endTime) => {
-    const [hours, minutes] = endTime.split(':').map(Number);
-    const eventDateTime = new Date(eventDate);
-    eventDateTime.setHours(hours, minutes);
-    return eventDateTime < currentDateTime;
+    // If endTime is not provided, consider the event as past if the date is before today
+    if (!endTime) {
+      const eventDateObj = new Date(eventDate);
+      const today = new Date();
+      today.setHours(0, 0, 0, 0); // Reset time part to compare dates only
+      return eventDateObj < today;
+    }
+    
+    try {
+      const [hours, minutes] = endTime.split(':').map(Number);
+      const eventDateTime = new Date(eventDate);
+      eventDateTime.setHours(hours, minutes, 0, 0); // Set seconds and milliseconds to 0 for consistency
+      return eventDateTime < currentDateTime;
+    } catch (error) {
+      console.error('Error processing event time:', error);
+      // Fallback: consider event as past if we can't parse the time
+      return new Date(eventDate) < currentDateTime;
+    }
   };
 
   const getRegistrationButton = (event) => {
@@ -193,9 +207,10 @@ function EventPage() {
 
           {Object.entries(groupedEvents)
             .sort(([yearA], [yearB]) => yearB - yearA)
-            .map(([year, yearEvents]) => (
+            .map(([year, yearEvents], yearIndex) => (
               <div key={year} className="mb-8 md:mb-16">
                 <motion.div 
+                  key={`year-${year}`}
                   initial={{ opacity: 0, x: -100 }}
                   animate={{ opacity: 1, x: 0 }}
                   className="md:sticky relative md:top-24 left-0 w-16 md:w-24 h-12 md:h-16 rounded-lg bg-[#0088cc] text-white flex items-center justify-center text-xl md:text-3xl font-bold z-10"
@@ -204,7 +219,9 @@ function EventPage() {
                 </motion.div>
 
                 <div className="ml-0 md:ml-[180px] space-y-6 md:space-y-8 mt-4 md:mt-0">
-                  {yearEvents.map((event, index) => (
+                  {yearEvents.map((event, index) => {
+                    const eventKey = event._id || `event-${year}-${index}`;
+                    return (
                     <motion.div
                       key={event._id}
                       initial={{ opacity: 0, y: 50 }}
@@ -277,7 +294,8 @@ function EventPage() {
                         </div>
                       </div>
                     </motion.div>
-                  ))}
+                  );
+                })}
                 </div>
               </div>
             ))}

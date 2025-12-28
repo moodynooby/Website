@@ -11,7 +11,7 @@ team: "NA"
 dob: "2005-07-14"
 native_city: "Ahmedabad"
 food_preference: "Jain"
-profile_image: "https://drive.google.com/open?id=1BLpYNZk1bC3zxkXY1w66wD3LtAc8rgjy"
+profile_image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQYolLN1mXnrmoGmhJ4C0bIqnZqjI09GGEYxqK0oU2jc08V-dHVGOWwJA&s"
 linkedin_profile: "https://www.linkedin.com/in/shahparam"
 join_year: 2025
 ---

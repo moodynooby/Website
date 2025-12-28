@@ -49,20 +49,44 @@ const useMembers = () => {
     };
 
     members.forEach(member => {
+      // Skip members without a position
+      if (!member.position) return;
+      
+      // Handle Office Bearers
       if (member.position === 'OBs') {
         categorized.obsTeam.push(member);
-      } else if (member.position !== 'Faculty') {
-        const teamName = member.team.toLowerCase().replace(/ /g, '');
-        const teamKey = `${teamName}Team`;
-        if (categorized[teamKey]) {
-          categorized[teamKey].push(member);
-        } else if (teamName === 'logisticandtechnical') {
-            categorized.logisticsTeam.push(member);
-            categorized.technicalTeam.push(member);
-        } else if (teamName === 'socialmediaandcontent') {
-            categorized.socialmediaTeam.push(member);
-            categorized.contentTeam.push(member);
-        }
+        return;
+      }
+      
+      // Skip Faculty as they're handled separately
+      if (member.position === 'Faculty') {
+        return;
+      }
+      
+      // Handle members with no team or 'NA' team
+      if (!member.team || member.team === 'NA') {
+        // You might want to add these to a default team or handle differently
+        console.warn(`Member ${member.name} has no team assigned`);
+        return;
+      }
+      
+      // Process team names
+      const teamName = member.team.toLowerCase().replace(/\s+/g, '');
+      const teamKey = `${teamName}Team`;
+      
+      // Special case handling for combined teams
+      if (teamName === 'logisticandtechnical') {
+        categorized.logisticsTeam.push(member);
+        categorized.technicalTeam.push(member);
+      } else if (teamName === 'socialmediaandcontent') {
+        categorized.socialmediaTeam.push(member);
+        categorized.contentTeam.push(member);
+      } 
+      // Handle regular team assignments
+      else if (categorized[teamKey]) {
+        categorized[teamKey].push(member);
+      } else {
+        console.warn(`Unknown team: ${member.team} for member ${member.name}`);
       }
     });
 

@@ -350,14 +350,15 @@ const PastEvents = () => {
 
               {/* Mobile Pagination Dots - Moved up slightly to avoid overlap with arrows */}
               <div className="flex md:hidden justify-center items-center gap-2 absolute -bottom-2 left-0 right-0">
-                {pastEvents.map((_, index) => (
+                {pastEvents.map((event, index) => (
                   <div
-                    key={index}
+                    key={`dot-${event._id || index}`}
                     className={`h-2 rounded-full transition-all duration-300 ${
                       index === currentIndex 
                         ? 'bg-[#0088cc] w-8' 
                         : 'bg-gray-300 w-2'
                     }`}
+                    aria-label={`Go to event ${index + 1}`}
                   />
                 ))}
               </div>
