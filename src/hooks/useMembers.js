@@ -1,51 +1,38 @@
 import { useState, useEffect } from 'react';
-import axios from 'axios';
+import matter from 'gray-matter';
 
 const useMembers = () => {
   const [members, setMembers] = useState({});
-  const [loading, setLoading] = useState(true);
+  const [loading, setLoading]_useState(true);
   const [error, setError] = useState(null);
-  const backendUrl = import.meta.env.VITE_BACKEND_URL;
-  const apiKey = import.meta.env.VITE_API_KEY;
 
   useEffect(() => {
+    const fetchMembers = () => {
+      try {
+        const modules = import.meta.glob('/src/content/members/*.md', { query: '?raw', eager: true, import: 'default' });
+        const allMembers = Object.values(modules).map((fileContent) => {
+          const { data } = matter(fileContent);
+          return data;
+        });
+
+        const categorizedMembers = categorizeMembers(allMembers);
+        const facultyMembers = allMembers.filter(m => m.position === 'Faculty');
+
+        setMembers({
+          ...categorizedMembers,
+          faculty: facultyMembers
+        });
+
+      } catch (err) {
+        console.error("Error fetching members:", err);
+        setError("Failed to load members from local files.");
+      } finally {
+        setLoading(false);
+      }
+    };
+
     fetchMembers();
   }, []);
-
-  const fetchMembers = async () => {
-    try {
-      // Fetch all members
-      const response = await axios.get(`${backendUrl}/api/members`, {
-        headers: {
-          'x-api-key': apiKey
-        }
-      });
-      
-      // Fetch faculty members
-      const facultyResponse = await axios.get(`${backendUrl}/api/members-front?department=OBs&position=Faculty`, {
-        headers: {
-          'x-api-key': apiKey
-        }
-      });
-
-      const categorizedMembers = categorizeMembers(response.data);
-      setMembers({
-        ...categorizedMembers,
-        faculty: facultyResponse.data
-      });
-      setLoading(false);
-    } catch (error) {
-      console.error("Error fetching members:", error);
-      if (error.response?.status === 403) {
-        setError("Invalid API key");
-      } else if (error.code === 'ERR_NETWORK') {
-        setError("Network error - Please check your connection");
-      } else {
-        setError("Failed to load members");
-      }
-      setLoading(false);
-    }
-  };
 
   const categorizeMembers = (members) => {
     const categorized = {
@@ -95,4 +82,4 @@ const useMembers = () => {
   return { members, loading, error };
 };
 
-export default useMembers; 
+export default useMembers;
