@@ -206,13 +206,7 @@ const CommitteePage = () => {
 
   // Get filtered members
   const filteredFaculty = filterMembersByYear(members.faculty);
-  const filteredOfficeBearers = [
-    ...filterMembersByYear(members.obsChairperson),
-    ...filterMembersByYear(members.obsCoChairperson),
-    ...filterMembersByYear(members.obsSecretary),
-    ...filterMembersByYear(members.obsJointSecretary),
-    ...filterMembersByYear(members.obsTreasurer)
-  ];
+  const filteredOfficeBearers = filterMembersByYear(members.obsTeam);
 
   const teams = [
     { id: 'computersociety', title: 'Computer Society', data: filterMembersByYear(members.cseTeam) },
@@ -222,6 +216,8 @@ const CommitteePage = () => {
     { id: 'roboticsandautomationsociety', title: 'Robotics and Automation Society', data: filterMembersByYear(members.rasTeam) },
     { id: 'socialmedia', title: 'Social Media Team', data: filterMembersByYear(members.socialmediaTeam) },
     { id: 'technical', title: 'Technical Team', data: filterMembersByYear(members.technicalTeam) },
+    { id: 'eee', title: 'EEE Team', data: filterMembersByYear(members.eeeTeam) },
+    { id: 'wie', title: 'WIE', data: filterMembersByYear(members.wieTeam) },
   ].filter(team => team.data?.length > 0);
 
   return (

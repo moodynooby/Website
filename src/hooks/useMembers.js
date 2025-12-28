@@ -1,5 +1,5 @@
-import { useState, useEffect } from "react";
-import matter from "gray-matter";
+import { useState, useEffect } from 'react';
+import matter from 'gray-matter';
 
 const useMembers = () => {
   const [members, setMembers] = useState({});
@@ -9,25 +9,20 @@ const useMembers = () => {
   useEffect(() => {
     const fetchMembers = () => {
       try {
-        const modules = import.meta.glob("/src/content/members/*.md", {
-          query: "?raw",
-          eager: true,
-          import: "default",
-        });
+        const modules = import.meta.glob('../content/members/*.md', { query: '?raw', eager: true, import: 'default' });
         const allMembers = Object.values(modules).map((fileContent) => {
           const { data } = matter(fileContent);
           return data;
         });
 
         const categorizedMembers = categorizeMembers(allMembers);
-        const facultyMembers = allMembers.filter(
-          (m) => m.position === "Faculty",
-        );
+        const facultyMembers = allMembers.filter(m => m.position === 'Faculty');
 
         setMembers({
           ...categorizedMembers,
-          faculty: facultyMembers,
+          faculty: facultyMembers
         });
+
       } catch (err) {
         console.error("Error fetching members:", err);
         setError("Failed to load members from local files.");
@@ -41,11 +36,7 @@ const useMembers = () => {
 
   const categorizeMembers = (members) => {
     const categorized = {
-      obsChairperson: [],
-      obsCoChairperson: [],
-      obsSecretary: [],
-      obsJointSecretary: [],
-      obsTreasurer: [],
+      obsTeam: [],
       cseTeam: [],
       contentTeam: [],
       graphicsTeam: [],
@@ -53,34 +44,34 @@ const useMembers = () => {
       rasTeam: [],
       socialmediaTeam: [],
       technicalTeam: [],
+      eeeTeam: [],
+      wieTeam: [],
     };
 
-    members.forEach((member) => {
-      if (member.department === "OBs") {
-        if (member.position === "Chairperson")
-          categorized.obsChairperson.push(member);
-        else if (member.position === "Co - Chairperson")
-          categorized.obsCoChairperson.push(member);
-        else if (member.position === "Secretary")
-          categorized.obsSecretary.push(member);
-        else if (member.position === "Joint - Secretary")
-          categorized.obsJointSecretary.push(member);
-        else if (member.position === "Treasurer")
-          categorized.obsTreasurer.push(member);
-      } else if (member.position !== "Faculty") {
-        const teamKey = `${member.department.toLowerCase()}Team`;
+    members.forEach(member => {
+      if (member.position === 'OBs') {
+        categorized.obsTeam.push(member);
+      } else if (member.position !== 'Faculty') {
+        const teamName = member.team.toLowerCase().replace(/ /g, '');
+        const teamKey = `${teamName}Team`;
         if (categorized[teamKey]) {
           categorized[teamKey].push(member);
+        } else if (teamName === 'logisticandtechnical') {
+            categorized.logisticsTeam.push(member);
+            categorized.technicalTeam.push(member);
+        } else if (teamName === 'socialmediaandcontent') {
+            categorized.socialmediaTeam.push(member);
+            categorized.contentTeam.push(member);
         }
       }
     });
 
     // Sort teams to place "Head" before "Member"
-    Object.keys(categorized).forEach((key) => {
-      if (key.endsWith("Team")) {
+    Object.keys(categorized).forEach(key => {
+      if (key.endsWith('Team')) {
         categorized[key].sort((a, b) => {
-          if (a.position === "Head") return -1;
-          if (b.position === "Head") return 1;
+          if (a.position === "Department Head") return -1;
+          if (b.position === "Department Head") return 1;
           return 0;
         });
       }

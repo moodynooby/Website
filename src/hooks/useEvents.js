@@ -9,7 +9,7 @@ const useEvents = () => {
   useEffect(() => {
     const fetchEvents = () => {
       try {
-        const modules = import.meta.glob('/src/content/events/*.md', { query: '?raw', eager: true, import: 'default' });
+        const modules = import.meta.glob('../content/events/*.md', { query: '?raw', eager: true, import: 'default' });
         const allEvents = Object.values(modules).map((fileContent) => {
           const { data } = matter(fileContent);
           return data;
