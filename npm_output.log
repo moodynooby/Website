@@ -2,8 +2,9 @@
 > ieee_web@0.0.0 dev
 > vite --host
 
+Re-optimizing dependencies because lockfile has changed
 
-  VITE v6.0.3  ready in 521 ms
+  VITE v6.0.3  ready in 768 ms
 
   ➜  Local:   http://localhost:5173/
   ➜  Network: http://192.168.0.2:5173/

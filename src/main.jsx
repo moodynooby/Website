@@ -1,3 +1,5 @@
+import { Buffer } from 'buffer';
+window.Buffer = Buffer;
 import React from 'react'; // Add this import to avoid the "React not defined" error
 import { StrictMode } from 'react';
 import { createRoot } from 'react-dom/client';
