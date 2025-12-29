@@ -14,10 +14,10 @@ const useMembers = () => {
     const processedMembers = committeeData.map(member => ({
       name: member['Full Name'],
       position: member.Position,
-      profile_image: member['One Professional Photo'],
+      profile_image: 'https://picsum.photos/225/300',
       linkedinProfile: member['Linkedin Profile'],
       join_year: member.join_year,
-      team: member.Team,
+      team: member['Team (NA for OBs)'],
       _id: member['Enrollment number '] + member['Full Name'], // create a unique id
     }));
     const categorizedMembers = categorizeMembers(processedMembers);
@@ -62,11 +62,7 @@ const useMembers = () => {
 
   const categorizeMembers = (members) => {
     const categorized = {
-      obsChairperson: [],
-      obsCoChairperson: [],
-      obsSecretary: [],
-      obsJointSecretary: [],
-      obsTreasurer: [],
+      officeBearers: [],
       cseTeam: [],
       graphicsTeam: [],
       rasTeam: [],
@@ -78,41 +74,41 @@ const useMembers = () => {
     };
 
     members.forEach(member => {
-        if (member.position === 'OBs') {
-            categorized.obsChairperson.push(member); // Simplified
+        if (member.position === 'OBs' || member.position === 'Department Head' || member.position === 'Committee Members') {
+            categorized.officeBearers.push(member);
         } else if (member.position === 'Faculty') {
             categorized.faculty.push(member);
-        } else {
-            let teamKey;
-            switch(member.team) {
-                case 'CS Team':
-                    teamKey = 'cseTeam';
-                    break;
-                case 'Graphics Team':
-                    teamKey = 'graphicsTeam';
-                    break;
-                case 'RAS Team':
-                    teamKey = 'rasTeam';
-                    break;
-                case 'Logistic and technical Team':
-                    teamKey = 'logisticsandtechnicalTeam';
-                    break;
-                case 'Social Media and Content':
-                    teamKey = 'socialmediaandcontentTeam';
-                    break;
-                case 'EEE Team':
-                    teamKey = 'eeeTeam';
-                    break;
-                case 'WIE':
-                    teamKey = 'wieTeam';
-                    break;
-                default:
-                    teamKey = null;
-            }
+        }
 
-            if(teamKey && categorized[teamKey]) {
-                categorized[teamKey].push(member);
-            }
+        let teamKey;
+        switch(member.team) {
+            case 'CS Team':
+                teamKey = 'cseTeam';
+                break;
+            case 'Graphics Team':
+                teamKey = 'graphicsTeam';
+                break;
+            case 'RAS Team':
+                teamKey = 'rasTeam';
+                break;
+            case 'Logistic and technical Team':
+                teamKey = 'logisticsandtechnicalTeam';
+                break;
+            case 'Social Media and Content':
+                teamKey = 'socialmediaandcontentTeam';
+                break;
+            case 'EEE Team':
+                teamKey = 'eeeTeam';
+                break;
+            case 'WIE':
+                teamKey = 'wieTeam';
+                break;
+            default:
+                teamKey = null;
+        }
+
+        if(teamKey && categorized[teamKey]) {
+            categorized[teamKey].push(member);
         }
     });
 

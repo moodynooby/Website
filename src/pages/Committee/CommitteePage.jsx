@@ -232,7 +232,7 @@ const CommitteePage = () => {
 
   // Get filtered members
   const filteredFaculty = filterMembersByYear(members.faculty);
-  const filteredOfficeBearers = filterMembersByYear(members.obsChairperson) || [];
+  const filteredOfficeBearers = filterMembersByYear(members.officeBearers) || [];
 
   const teams = [
     { id: 'computersociety', title: 'Computer Society', data: filterMembersByYear(members.cseTeam) },
@@ -314,7 +314,7 @@ const CommitteePage = () => {
                   <h2 className="text-2xl font-bold mb-8 text-gray-900 text-center">Office Bearers</h2>
                   <div className="flex flex-wrap justify-center gap-4 md:gap-6">
                     {filteredOfficeBearers.map(member => (
-                      <MemberCard key={`obs-${member._id}-${member.role}`} member={member} />
+                      <MemberCard key={`obs-${member._id}`} member={member} />
                     ))}
                   </div>
                 </div>

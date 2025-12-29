@@ -1,0 +1,32 @@
+
+> ieee_web@0.0.0 dev
+> vite --host
+
+Port 5173 is in use, trying another one...
+Port 5174 is in use, trying another one...
+Port 5175 is in use, trying another one...
+Port 5176 is in use, trying another one...
+Port 5177 is in use, trying another one...
+
+  VITE v6.0.3  ready in 239 ms
+
+  ➜  Local:   http://localhost:5178/
+  ➜  Network: http://192.168.0.2:5178/
+Browserslist: browsers data (caniuse-lite) is 12 months old. Please run:
+  npx update-browserslist-db@latest
+  Why you should do it regularly: https://github.com/browserslist/update-db#readme
+1:57:58 PM [vite] (client) page reload src/assets/committeeData.js
+2:02:29 PM [vite] (client) page reload src/pages/Committee/CommitteePage.jsx
+2:04:15 PM [vite] (client) page reload src/hooks/useMembers.js
+3:02:24 PM [vite] (client) page reload src/pages/Committee/CommitteePage.jsx
+3:03:12 PM [vite] (client) page reload src/pages/Committee/CommitteePage.jsx
+3:04:46 PM [vite] (client) page reload src/hooks/useMembers.js
+3:07:11 PM [vite] (client) page reload src/pages/Committee/CommitteePage.jsx
+3:08:33 PM [vite] (client) page reload src/pages/Committee/CommitteePage.jsx
+3:09:55 PM [vite] (client) page reload src/pages/Committee/CommitteePage.jsx
+3:10:42 PM [vite] (client) page reload src/hooks/useMembers.js
+3:12:16 PM [vite] (client) page reload src/pages/Committee/CommitteePage.jsx
+3:12:20 PM [vite] (client) page reload src/pages/Committee/CommitteePage.jsx
+3:14:26 PM [vite] (client) page reload src/assets/committeeData.js
+3:14:30 PM [vite] (client) page reload src/pages/Committee/CommitteePage.jsx
+3:14:44 PM [vite] (client) page reload src/pages/Committee/CommitteePage.jsx

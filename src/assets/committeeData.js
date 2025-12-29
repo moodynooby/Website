@@ -14,7 +14,7 @@ export const committeeData = [
     "Date of Birth": "5/26/2007",
     "Native City": "Vadodara",
     "Food preferance": "Vegeterian",
-    "One Professional Photo": "https://drive.google.com/open?id=1zGiz0Ajvp_B_oxGOSjh_WaKz1NJohhcn",
+    "One Professional Photo": "https://picsum.photos/225/300",
     "Linkedin Profile": "https://www.linkedin.com/in/prachi-shah-901203228?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
     "join_year": 2025
   },
@@ -33,7 +33,7 @@ export const committeeData = [
     "Date of Birth": "7/14/2005",
     "Native City": "Ahmedabad",
     "Food preferance": "Jain",
-    "One Professional Photo": "https://drive.google.com/open?id=1BLpYNZk1bC3zxkXY1w66wD3LtAc8rgjy",
+    "One Professional Photo": "https://picsum.photos/225/300",
     "Linkedin Profile": "https://www.linkedin.com/in/shahparam",
     "join_year": 2025
   },
@@ -52,27 +52,8 @@ export const committeeData = [
     "Date of Birth": "7/14/2006",
     "Native City": "Anand",
     "Food preferance": "Non-vegeterian",
-    "One Professional Photo": "https://drive.google.com/open?id=1Ja_wf_EkYQKuhjsuV_lpjOJPUcMyyeSN",
+    "One Professional Photo": "https://picsum.photos/225/300",
     "Linkedin Profile": "https://www.linkedin.com/in/shlok-thakkar-cg/",
-    "join_year": 2025
-  },
-  {
-    "Timestamp": "9/9/2025 19:23:37",
-    "Email Address": "khushi.s29@ahduni.edu.in",
-    "Full Name": "Khushi Shah",
-    "AU Mail ID": "khushi.s29@ahduni.edu.in",
-    "Personal Mail ID": "khuushis1@gmail.com",
-    "Enrollment number ": "AU2440045",
-    "Major": "BTech CSE",
-    "Semester": 3,
-    "Mobile Number": 8401406727,
-    "Position": "Committee Members",
-    "Team": "Graphics Team",
-    "Date of Birth": "3/16/2007",
-    "Native City": "Ahmedabad",
-    "Food preferance": "Vegeterian",
-    "One Professional Photo": "https://drive.google.com/open?id=14VI9P1S7wm9W0AI8NAxcbped1iUeAlDf",
-    "Linkedin Profile": "https://www.linkedin.com/in/khushi-shah-1b773834b?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app",
     "join_year": 2025
   },
   {
@@ -90,27 +71,8 @@ export const committeeData = [
     "Date of Birth": "1/4/2007",
     "Native City": "Gandhidham, Kutch ",
     "Food preferance": "Vegeterian",
-    "One Professional Photo": "https://drive.google.com/open?id=1S4rAZ5SXxJUoA1ntkl2d7ge0hSW4xbra",
+    "One Professional Photo": "https://picsum.photos/225/300",
     "Linkedin Profile": "https://www.linkedin.com/in/krish-poddar",
-    "join_year": 2025
-  },
-  {
-    "Timestamp": "9/9/2025 21:11:36",
-    "Email Address": "om.p5@ahduni.edu.in",
-    "Full Name": "Om Alkeshbhai Patel",
-    "AU Mail ID": "om.p5@ahduni.edu.in",
-    "Personal Mail ID": "ompatel1825@gmail.com",
-    "Enrollment number ": "AU2540133",
-    "Major": "BTech EEE",
-    "Semester": 1,
-    "Mobile Number": 7600548018,
-    "Position": "Committee Members",
-    "Team": "RAS Team",
-    "Date of Birth": "4/18/2007",
-    "Native City": "Ahmedabad",
-    "Food preferance": "Vegeterian",
-    "One Professional Photo": "https://drive.google.com/open?id=1xjFbv7gFoK6M4R5U_qncE28Hxt3-p-yE",
-    "Linkedin Profile": "https://www.linkedin.com/in/om-patel-298457293",
     "join_year": 2025
   },
   {
@@ -128,27 +90,8 @@ export const committeeData = [
     "Date of Birth": "10/16/2005",
     "Native City": "Surat",
     "Food preferance": "Vegeterian",
-    "One Professional Photo": "https://drive.google.com/open?id=1P9gtBUZS1svq-39VUmxhxqGV1AXuqb5Z",
+    "One Professional Photo": "https://picsum.photos/225/300",
     "Linkedin Profile": "https://www.linkedin.com/in/deeppateldw1611/",
-    "join_year": 2025
-  },
-  {
-    "Timestamp": "9/10/2025 12:25:15",
-    "Email Address": "jiya.p@ahduni.edu.in",
-    "Full Name": "Jiya Patel",
-    "AU Mail ID": "Jiya.p@ahduni.edu.in",
-    "Personal Mail ID": "Jiyapatel070703@gmail.com",
-    "Enrollment number ": "AU2540116",
-    "Major": "BTech CSE",
-    "Semester": 1,
-    "Mobile Number": 9510501036,
-    "Position": "Committee Members",
-    "Team": "CS Team",
-    "Date of Birth": "7/3/2007",
-    "Native City": "Unjha, Mehsana",
-    "Food preferance": "Vegeterian",
-    "One Professional Photo": "https://drive.google.com/open?id=14kbiJ6uMnRLE_eV2HOoTKh_j9UBfk53b",
-    "Linkedin Profile": "https://www.linkedin.com/in/jiya-patel-575429378",
     "join_year": 2025
   },
   {
@@ -166,7 +109,7 @@ export const committeeData = [
     "Date of Birth": "7/1/2006",
     "Native City": "Surat",
     "Food preferance": "Vegeterian",
-    "One Professional Photo": "https://drive.google.com/open?id=1Wu3IZFV7iPgCo3glUTGuUGX4FCNQe71Y",
+    "One Professional Photo": "https://picsum.photos/225/300",
     "Linkedin Profile": "https://www.linkedin.com/in/maitri-parekh-aa5b11332?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
     "join_year": 2025
   },
@@ -185,7 +128,7 @@ export const committeeData = [
     "Date of Birth": "12/1/2007",
     "Native City": "Ahmedabad",
     "Food preferance": "Vegeterian (No onion No garlic)",
-    "One Professional Photo": "https://drive.google.com/open?id=1ZPS1hrM6sWph4d5X-xw_VgLytoEJvXB6",
+    "One Professional Photo": "https://picsum.photos/225/300",
     "Linkedin Profile": "https://www.linkedin.com/in/manas-doshi-644751363/",
     "join_year": 2025
   },
@@ -204,7 +147,7 @@ export const committeeData = [
     "Date of Birth": "5/17/2007",
     "Native City": "Ahmedabad ",
     "Food preferance": "Jain",
-    "One Professional Photo": "https://drive.google.com/open?id=1qnEDkkkAJHBzruouCWITqbSXUwGljmpE",
+    "One Professional Photo": "https://picsum.photos/225/300",
     "Linkedin Profile": "https://www.linkedin.com/in/vansh-shah-6aa691374?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
     "join_year": 2025
   },
@@ -223,7 +166,7 @@ export const committeeData = [
     "Date of Birth": "10/12/2006",
     "Native City": "Bhavnagar ",
     "Food preferance": "Non-vegeterian",
-    "One Professional Photo": "https://drive.google.com/open?id=1-gt4xnw2KPRZNWKBjXOCCgVPNM6z00Dk",
+    "One Professional Photo": "https://picsum.photos/225/300",
     "Linkedin Profile": "www.linkedin.com/in/ aleesha-makda",
     "join_year": 2025
   },
@@ -242,7 +185,7 @@ export const committeeData = [
     "Date of Birth": "9/23/2006",
     "Native City": "Ahmedabad ",
     "Food preferance": "Vegeterian",
-    "One Professional Photo": "https://drive.google.com/open?id=194DeUaL1BoViitIwrV36_1rQHG3FMCO3",
+    "One Professional Photo": "https://picsum.photos/225/300",
     "Linkedin Profile": "https://www.linkedin.com/in/pratyusha-sharma-46b038324?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app",
     "join_year": 2025
   },
@@ -261,7 +204,7 @@ export const committeeData = [
     "Date of Birth": "3/16/2007",
     "Native City": "Ahmedabad ",
     "Food preferance": "Vegeterian",
-    "One Professional Photo": "https://drive.google.com/open?id=1C4iB1hAp4Eb29kQtf8qnhiGB6YR-v0mf",
+    "One Professional Photo": "https://picsum.photos/225/300",
     "Linkedin Profile": "https://www.linkedin.com/in/khushi-shah-1b773834b?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app",
     "join_year": 2025
   },
@@ -280,7 +223,7 @@ export const committeeData = [
     "Date of Birth": "6/13/2025",
     "Native City": "Ahmedabad",
     "Food preferance": "Vegeterian (No onion No garlic)",
-    "One Professional Photo": "https://drive.google.com/open?id=1bids9hPir7_NShjrRANjb5VX_OZCvqkh",
+    "One Professional Photo": "https://picsum.photos/225/300",
     "Linkedin Profile": "https://www.linkedin.com/in/meet-gandhi-ab6743308/",
     "join_year": 2025
   },
@@ -299,7 +242,7 @@ export const committeeData = [
     "Date of Birth": "12/16/2004",
     "Native City": "Ahmedabad",
     "Food preferance": "Vegeterian",
-    "One Professional Photo": "https://drive.google.com/open?id=1g3o-vkcTfZUXLzsfIoZTxgxpDmhjTSpB",
+    "One Professional Photo": "https://picsum.photos/225/300",
     "Linkedin Profile": "https://www.linkedin.com/in/mukesh-chaudhari-8730932b6?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
     "join_year": 2025
   },
@@ -318,7 +261,7 @@ export const committeeData = [
     "Date of Birth": "7/3/2007",
     "Native City": "Mehsana",
     "Food preferance": "Vegeterian",
-    "One Professional Photo": "https://drive.google.com/open?id=17wbkSTf2c1V2hx3inHAkXZrJ8-nDMX_f",
+    "One Professional Photo": "https://picsum.photos/225/300",
     "Linkedin Profile": "https://www.linkedin.com/in/jiya-patel-575429378?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app",
     "join_year": 2025
   },
@@ -337,7 +280,7 @@ export const committeeData = [
     "Date of Birth": "4/18/2007",
     "Native City": "Ahmedabad",
     "Food preferance": "Vegeterian",
-    "One Professional Photo": "https://drive.google.com/open?id=1y2U8aZ8z-hlzowFMfDBJvoSZdqgZekiv",
+    "One Professional Photo": "https://picsum.photos/225/300",
     "Linkedin Profile": "www.linkedin.com/in/om-patel-298457293",
     "join_year": 2025
   },
@@ -356,7 +299,7 @@ export const committeeData = [
     "Date of Birth": "12/29/2005",
     "Native City": "Rajkot",
     "Food preferance": "Vegeterian",
-    "One Professional Photo": "https://drive.google.com/open?id=1rXDBc-EaL91h-Rqj5z6JYg9Ez-0N63cl",
+    "One Professional Photo": "https://picsum.photos/225/300",
     "Linkedin Profile": "https://www.linkedin.com/in/yug-bangoriya-749138315?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app",
     "join_year": 2025
   }
